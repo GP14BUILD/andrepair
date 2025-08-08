@@ -80,6 +80,64 @@
   </div>
 </section>
 
+<!-- Video Section with Click-to-Play, Breathing, and Amber Glow -->
+<section class="py-16 px-4 md:px-16 bg-gray-100">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-semibold mb-6">Watch the GP14 in Action</h2>
+
+    <div class="relative overflow-hidden rounded shadow cursor-pointer group" style="padding-top: 56.25%;" id="videoContainer">
+      <!-- Thumbnail -->
+      <img
+        src="https://img.youtube.com/vi/dFD7UGL1EHo/hqdefault.jpg"
+        alt="GP14 Racing and Cruising Builds"
+        class="absolute top-0 left-0 w-full h-full object-cover group-hover:brightness-75 transition"
+      />
+      <!-- Play Button -->
+      <div class="absolute inset-0 flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg"
+          class="w-16 h-16 opacity-90 group-hover:opacity-100 breathing-glow"
+          style="color: #FFB000;"
+          fill="currentColor"
+          viewBox="0 0 24 24">
+          <path d="M8 5v14l11-7z" />
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Breathing zoom + amber glow animation */
+  @keyframes breathingGlow {
+    0%, 100% {
+      transform: scale(1);
+      filter: drop-shadow(0 0 4px rgba(255, 176, 0, 0.4));
+    }
+    50% {
+      transform: scale(1.15);
+      filter: drop-shadow(0 0 14px rgba(255, 176, 0, 0.85));
+    }
+  }
+  .breathing-glow {
+    animation: breathingGlow 2.5s ease-in-out infinite;
+  }
+</style>
+
+<script>
+  document.getElementById('videoContainer').addEventListener('click', function () {
+    const iframe = document.createElement('iframe');
+    iframe.setAttribute('src', 'https://www.youtube.com/embed/dFD7UGL1EHo?autoplay=1');
+    iframe.setAttribute('frameborder', '0');
+    iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+    iframe.setAttribute('allowfullscreen', '');
+    iframe.className = 'absolute top-0 left-0 w-full h-full';
+    this.innerHTML = '';
+    this.appendChild(iframe);
+  });
+</script>
+
+<!-- Gallery Section -->
+<section class="py-16 px-4 md:px-16 bg-white dark:bg-gray-900">
 
 
 <!-- Gallery Section -->
