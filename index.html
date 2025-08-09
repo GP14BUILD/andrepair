@@ -1,81 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Donnelly GP14 Racing and Cruising Builds</title>
   <meta name="description" content="Custom GP14 racing and cruising builds. CAD, CFD and CNC precision, championship-winning hull, FSC® timber, RCD-compliant. Repairs and restorations." />
+  <meta name="theme-color" content="#111827" />
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://your-domain.example/" />
+  <!-- Canonical (UPDATE TO REAL DOMAIN) -->
+  <link rel="canonical" href="https://gp14build.example/" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Donnelly GP14 Racing and Cruising Builds" />
   <meta property="og:description" content="Championship-proven GP14 builds with CAD/CFD/CNC precision. Repairs and restorations." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://i.imgur.com/wtx2tVw.jpg" />
-  <meta property="og:url" content="https://your-domain.example/" />
+  <meta property="og:url" content="https://gp14build.example/" />
+  <meta property="og:site_name" content="Donnelly GP14" />
+  <meta property="og:locale" content="en_GB" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@YourHandle" />
 
+  <!-- Icons (optional: replace with your real files) -->
   <link rel="icon" href="/favicon.ico" />
-  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Performance hints -->
+  <link rel="preconnect" href="https://i.imgur.com" crossorigin />
+  <link rel="preconnect" href="https://www.youtube-nocookie.com" crossorigin />
+
+  <!-- Tailwind (ship a compiled build in prod) -->
+  <script src="https://cdn.tailwindcss.com" defer></script>
 
   <!-- Preload/LCP hero image -->
-  <link rel="preload" as="image" href="https://i.imgur.com/wtx2tVw.jpg" imagesrcset="https://i.imgur.com/wtx2tVw.jpg 1920w, https://i.imgur.com/wtx2tVw.jpg 1280w" imagesizes="100vw" fetchpriority="high">
+  <link
+    rel="preload"
+    as="image"
+    href="https://i.imgur.com/wtx2tVw.jpg"
+    imagesrcset="https://i.imgur.com/wtx2tVw.jpg 1920w, https://i.imgur.com/wtx2tVw.jpg 1280w"
+    imagesizes="100vw"
+    fetchpriority="high">
 
   <style>
     /* Breathing zoom + amber glow animation */
     @keyframes breathingGlow {
-      0%, 100% {
-        transform: scale(1);
-        filter: drop-shadow(0 0 4px rgba(255, 176, 0, 0.4));
-      }
-      50% {
-        transform: scale(1.15);
-        filter: drop-shadow(0 0 14px rgba(255, 176, 0, 0.85));
-      }
+      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 4px rgba(255,176,0,.4)); }
+      50% { transform: scale(1.15); filter: drop-shadow(0 0 14px rgba(255,176,0,.85)); }
     }
     .breathing-glow { animation: breathingGlow 2.5s ease-in-out infinite; }
-    /* Hide focus ring only when using mouse */
     .focus-not-visible:focus { outline: none; }
-    /* Respect reduced motion */
     @media (prefers-reduced-motion: reduce) { .breathing-glow { animation: none !important; } }
   </style>
 
-  <!-- Structured data -->
+  <!-- Structured data (update address/socials if you have them) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Donnelly GP14 Racing and Cruising Builds",
     "description": "Custom GP14 racing and cruising builds. CAD/CFD/CNC precision, repairs & restorations.",
-    "url": "https://your-domain.example/",
+    "url": "https://gp14build.example/",
     "image": "https://i.imgur.com/wtx2tVw.jpg",
     "telephone": "+44 7742 545699",
-    "areaServed": "UK & Ireland",
+    "areaServed": ["GB","IE"],
+    "address": { "@type": "PostalAddress", "addressCountry": "GB" },
+    "openingHours": "Mo-Fr 09:00-17:00",
     "makesOffer": [
       {"@type":"Service","name":"GP14 builds"},
       {"@type":"Service","name":"Wooden boat repairs"}
-    ]
+    ],
+    "sameAs": []
   }
   </script>
+
+  <!-- Content Security Policy (tune for your stack) -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self';
+                 img-src 'self' https://i.imgur.com https://raw.githubusercontent.com data:;
+                 script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://www.googletagmanager.com;
+                 style-src 'self' 'unsafe-inline';
+                 frame-src https://www.youtube-nocookie.com;
+                 connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com;">
+
 </head>
 <body class="antialiased text-gray-900">
   <!-- Skip link -->
   <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:bg-white focus:text-black focus:px-3 focus:py-2 focus:rounded">Skip to content</a>
 
-  <!-- Hero Section -->
-  <header class="bg-cover bg-center h-screen" style="background-image: url('https://i.imgur.com/wtx2tVw.jpg');">
-    <div class="h-full w-full bg-black/50 flex items-center justify-center">
+  <!-- Hero: make the image the real LCP -->
+  <header class="relative h-screen">
+    <picture>
+      <source srcset="https://i.imgur.com/wtx2tVw.jpg 1920w, https://i.imgur.com/wtx2tVw.jpg 1280w" sizes="100vw" />
+      <img
+        src="https://i.imgur.com/wtx2tVw.jpg"
+        alt="GP14 racing dinghy underway"
+        class="absolute inset-0 w-full h-full object-cover"
+        fetchpriority="high" />
+    </picture>
+    <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
       <div class="text-center text-white px-4">
         <h1 class="text-4xl md:text-6xl font-bold mb-4">Donnelly GP14 Racing and Cruising Builds</h1>
         <p class="text-xl">CAD, CFD, and CNC implemented for a flawless hull shape.</p>
         <p class="text-lg mt-4">
-          <a href="tel:+442894479569" aria-label="0 2 8 9 4 4 7 9 5 6 9" class="underline decoration-dotted hover:text-amber-500">028 9447 9569</a>
+          <a href="tel:+442894479569" aria-label="Call 028 9447 9569" class="underline decoration-dotted hover:text-amber-500">028 9447 9569</a>
           <span class="mx-1">/</span>
-          <a href="tel:+447742545699" aria-label="0 7 7 4 2 5 4 5 6 9 9" class="underline decoration-dotted hover:text-amber-500">07742 545699</a>
+          <a href="tel:+447742545699" aria-label="Call 07742 545699" class="underline decoration-dotted hover:text-amber-500">07742 545699</a>
           <span class="mx-2">·</span>
           <a href="mailto:gp14build@gmail.com" class="underline decoration-dotted hover:text-amber-500">gp14build@gmail.com</a>
         </p>
@@ -101,11 +131,13 @@
       </div>
     </section>
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) — consider loading after consent -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17453590223"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-17453590223');
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17453590223');
     </script>
 
     <!-- Features -->
@@ -120,7 +152,7 @@
             <li>FSC&reg;-certified sustainable timber</li>
           </ul>
           <ul class="space-y-3 list-disc list-inside">
-            <li>Through-deck sheeting & curved deck coamings</li>
+            <li>Through-deck sheeting &amp; curved deck coamings</li>
             <li>Rotary-cut Sapelle hardwood deck options</li>
             <li>Multiple fit-out configurations available</li>
             <li>Complies with CE and Recreational Craft Directive</li>
@@ -154,7 +186,7 @@
       </div>
     </section>
 
-    <!-- Video Section (single, privacy-enhanced YouTube) -->
+    <!-- Video Section (privacy-enhanced YouTube) -->
     <section class="py-16 px-4 md:px-16 bg-gray-100">
       <div class="max-w-4xl mx-auto text-center">
         <h2 class="text-3xl font-semibold mb-6">Watch the GP14 in Action</h2>
@@ -179,7 +211,7 @@
     <!-- Gallery Section -->
     <section class="py-16 px-4 md:px-16 bg-white dark:bg-gray-900">
       <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-3xl font-semibold mb-6">Visuals & Hull Design</h2>
+        <h2 class="text-3xl font-semibold mb-6">Visuals &amp; Hull Design</h2>
         <div id="gallery" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">
           <a href="https://raw.githubusercontent.com/kevin102-debug/gp14/main/579A4865.jpg" target="_blank" rel="noopener noreferrer">
             <img src="https://raw.githubusercontent.com/kevin102-debug/gp14/main/579A4865.jpg" alt="GP14 close-up of hull finish" class="w-64 h-40 object-cover rounded shadow cursor-pointer" loading="lazy" width="256" height="160" />
@@ -231,28 +263,29 @@
       <div class="mt-4 md:mt-0 text-sm space-x-4">
         <a href="mailto:gp14build@gmail.com" class="hover:underline">gp14build@gmail.com</a>
         <span aria-hidden="true">|</span>
-        <a href="tel:+447742545699" aria-label="0 7 7 4 2 5 4 5 6 9 9" class="hover:underline">07742 545699</a>
+        <a href="tel:+447742545699" aria-label="Call 07742 545699" class="hover:underline">07742 545699</a>
       </div>
     </div>
   </footer>
 
   <!-- Modal -->
-  <div id="imageModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50" role="dialog" aria-modal="true" aria-label="Image preview dialog">
-    <div class="relative max-w-[90vw] max-h-[90vh] outline-none" tabindex="-1">
+  <div id="imageModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50"
+       role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc">
+    <div class="relative max-w-[90vw] max-h-[90vh]" tabindex="-1">
       <button id="closeBtn" class="absolute -top-12 right-0 text-white text-3xl focus-not-visible" aria-label="Close (Esc)">&times;</button>
-      <img id="modalImage" class="max-w-full max-h-[90vh] rounded shadow" alt="Expanded gallery image" />
+      <img id="modalImage" class="max-w-full max-h-[90vh] rounded shadow" alt="" tabindex="0" />
       <h2 id="modalTitle" class="sr-only">Image preview</h2>
       <p id="modalDesc" class="sr-only">Press Escape to close the image preview.</p>
     </div>
   </div>
 
-  <script defer>
+  <script>
     // Footer year
     (function(){
       var y=document.getElementById('year'); if(y) y.textContent = new Date().getFullYear();
     })();
 
-    // Modal logic with focus management + trap
+    // Modal logic with focus management + trap + keyboard open from gallery
     (function () {
       const modal = document.getElementById('imageModal');
       const modalImage = document.getElementById('modalImage');
@@ -261,10 +294,10 @@
       const main = document.getElementById('main');
       let lastFocused = null;
 
-      const focusableSelectors = 'button,[href],img[tabindex],[tabindex]:not([tabindex="-1"])';
+      const FOCUSABLE = 'button,[href],img[tabindex],[tabindex]:not([tabindex="-1"])';
       function trapFocus(e) {
         if (e.key !== 'Tab' || modal.classList.contains('hidden')) return;
-        const nodes = modal.querySelectorAll(focusableSelectors);
+        const nodes = modal.querySelectorAll(FOCUSABLE);
         if (!nodes.length) return;
         const first = nodes[0], last = nodes[nodes.length - 1];
         if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
@@ -274,52 +307,53 @@
       function openModal(src, alt) {
         lastFocused = document.activeElement;
         modalImage.src = src;
-        modalImage.alt = alt || 'Expanded gallery image';
+        modalImage.alt = alt || '';
         document.body.style.overflow = 'hidden';
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
+        modal.classList.remove('hidden'); modal.classList.add('flex');
         modal.setAttribute('aria-hidden', 'false');
-        if (main) { try { main.inert = true; } catch(e){} }
-        closeBtn.focus({ preventScroll: true });
+        main?.setAttribute('aria-hidden', 'true');
         document.addEventListener('keydown', trapFocus);
+        closeBtn.focus({ preventScroll: true });
       }
 
       function closeModal() {
-        modal.classList.add('hidden');
-        modal.classList.remove('flex');
+        modal.classList.add('hidden'); modal.classList.remove('flex');
         modalImage.src = '';
         modal.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
-        if (main) { try { main.inert = false; } catch(e){} }
+        main?.setAttribute('aria-hidden', 'false');
         document.removeEventListener('keydown', trapFocus);
         if (lastFocused && typeof lastFocused.focus === 'function') {
           lastFocused.focus({ preventScroll: true });
         }
       }
 
-      // Click delegation for gallery thumbnails
-      if (gallery) {
-        gallery.addEventListener('click', (e) => {
-          const img = e.target.closest('img');
-          if (!img) return;
-          e.preventDefault();
-          const anchor = img.closest('a');
-          const href = anchor ? anchor.getAttribute('href') : img.getAttribute('src');
-          openModal(href, img.getAttribute('alt'));
-        });
-      }
+      // Click to open
+      gallery?.addEventListener('click', (e) => {
+        const img = e.target.closest('img'); if (!img) return;
+        e.preventDefault();
+        const a = img.closest('a');
+        const href = a ? a.getAttribute('href') : img.getAttribute('src');
+        openModal(href, img.getAttribute('alt'));
+      });
+
+      // Keyboard open (Enter/Space) on gallery links/images
+      gallery?.addEventListener('keydown', (e) => {
+        if (e.key !== 'Enter' && e.key !== ' ') return;
+        const target = e.target.closest('a, img'); if (!target) return;
+        e.preventDefault();
+        const a = target.tagName === 'A' ? target : target.closest('a');
+        const href = a ? a.getAttribute('href') : target.getAttribute('src');
+        const alt = (target.getAttribute && target.getAttribute('alt')) || '';
+        openModal(href, alt);
+      });
 
       // Close handlers
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeModal();
-      });
-
-      modal.addEventListener('click', (e) => {
-        if (e.target === modal) closeModal();
-      });
-
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+      modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
       closeBtn.addEventListener('click', closeModal);
     })();
   </script>
 </body>
 </html>
+
