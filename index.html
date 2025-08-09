@@ -5,19 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Donnelly GP14 Racing and Cruising Builds</title>
   <meta name="description" content="Custom GP14 racing and cruising builds. CAD, CFD and CNC precision, championship-winning hull, FSC® timber, RCD-compliant. Repairs and restorations." />
-  
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://your-domain.example/" />
+
   <!-- Open Graph -->
   <meta property="og:title" content="Donnelly GP14 Racing and Cruising Builds" />
   <meta property="og:description" content="Championship-proven GP14 builds with CAD/CFD/CNC precision. Repairs and restorations." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://i.imgur.com/wtx2tVw.jpg" />
   <meta property="og:url" content="https://your-domain.example/" />
-  
+
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="icon" href="/favicon.ico" />
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Preload/LCP hero image -->
+  <link rel="preload" as="image" href="https://i.imgur.com/wtx2tVw.jpg" imagesrcset="https://i.imgur.com/wtx2tVw.jpg 1920w, https://i.imgur.com/wtx2tVw.jpg 1280w" imagesizes="100vw" fetchpriority="high">
 
   <style>
     /* Breathing zoom + amber glow animation */
@@ -34,10 +40,32 @@
     .breathing-glow { animation: breathingGlow 2.5s ease-in-out infinite; }
     /* Hide focus ring only when using mouse */
     .focus-not-visible:focus { outline: none; }
+    /* Respect reduced motion */
+    @media (prefers-reduced-motion: reduce) { .breathing-glow { animation: none !important; } }
   </style>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Donnelly GP14 Racing and Cruising Builds",
+    "description": "Custom GP14 racing and cruising builds. CAD/CFD/CNC precision, repairs & restorations.",
+    "url": "https://your-domain.example/",
+    "image": "https://i.imgur.com/wtx2tVw.jpg",
+    "telephone": "+44 7742 545699",
+    "areaServed": "UK & Ireland",
+    "makesOffer": [
+      {"@type":"Service","name":"GP14 builds"},
+      {"@type":"Service","name":"Wooden boat repairs"}
+    ]
+  }
+  </script>
 </head>
 <body class="antialiased text-gray-900">
-  
+  <!-- Skip link -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:bg-white focus:text-black focus:px-3 focus:py-2 focus:rounded">Skip to content</a>
+
   <!-- Hero Section -->
   <header class="bg-cover bg-center h-screen" style="background-image: url('https://i.imgur.com/wtx2tVw.jpg');">
     <div class="h-full w-full bg-black/50 flex items-center justify-center">
@@ -45,12 +73,15 @@
         <h1 class="text-4xl md:text-6xl font-bold mb-4">Donnelly GP14 Racing and Cruising Builds</h1>
         <p class="text-xl">CAD, CFD, and CNC implemented for a flawless hull shape.</p>
         <p class="text-lg mt-4">
-          <a href="tel:+442894479569" class="underline decoration-dotted hover:text-amber-500">028 9447 9569</a>
+          <a href="tel:+442894479569" aria-label="0 2 8 9 4 4 7 9 5 6 9" class="underline decoration-dotted hover:text-amber-500">028 9447 9569</a>
           <span class="mx-1">/</span>
-          <a href="tel:+447742545699" class="underline decoration-dotted hover:text-amber-500">07742 545699</a>
+          <a href="tel:+447742545699" aria-label="0 7 7 4 2 5 4 5 6 9 9" class="underline decoration-dotted hover:text-amber-500">07742 545699</a>
           <span class="mx-2">·</span>
           <a href="mailto:gp14build@gmail.com" class="underline decoration-dotted hover:text-amber-500">gp14build@gmail.com</a>
         </p>
+        <div class="mt-8">
+          <a href="mailto:gp14build@gmail.com" class="inline-block bg-amber-500 hover:bg-amber-600 text-black font-medium px-6 py-3 rounded-2xl shadow">Enquire about 2025 build slots</a>
+        </div>
       </div>
     </div>
   </header>
@@ -69,18 +100,14 @@
         </p>
       </div>
     </section>
-    
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17453590223">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'AW-17453590223');
-</script>
-    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17453590223"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-17453590223');
+    </script>
+
     <!-- Features -->
     <section class="py-16 px-4 md:px-16 bg-white">
       <div class="max-w-5xl mx-auto">
@@ -110,7 +137,7 @@
         <p class="text-lg mb-6">
           Our GRP foils are manufactured using precision-milled moulds for repeatable and hydrodynamically refined performance. Light, stiff, and race-ready.
         </p>
-        <img src="https://i.imgur.com/EayebQw.jpg" alt="GP14 GRP Foils promotional flyer" class="mx-auto rounded shadow w-full max-w-md" loading="lazy" />
+        <img src="https://i.imgur.com/EayebQw.jpg" alt="GP14 GRP Foils promotional flyer" class="mx-auto rounded shadow w-full max-w-md" loading="lazy" width="768" height="1024" />
       </div>
     </section>
 
@@ -154,44 +181,44 @@
       <div class="max-w-4xl mx-auto text-center">
         <h2 class="text-3xl font-semibold mb-6">Visuals & Hull Design</h2>
         <div id="gallery" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">
-          <a href="https://raw.githubusercontent.com/kevin102-debug/gp14/main/579A4865.jpg" target="_blank" rel="noopener">
-            <img src="https://raw.githubusercontent.com/kevin102-debug/gp14/main/579A4865.jpg" alt="GP14 close-up of hull finish" class="w-64 h-40 object-cover rounded shadow cursor-pointer" loading="lazy" />
+          <a href="https://raw.githubusercontent.com/kevin102-debug/gp14/main/579A4865.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="https://raw.githubusercontent.com/kevin102-debug/gp14/main/579A4865.jpg" alt="GP14 close-up of hull finish" class="w-64 h-40 object-cover rounded shadow cursor-pointer" loading="lazy" width="256" height="160" />
           </a>
-          <a href="https://raw.githubusercontent.com/kevin102-debug/gp14/main/11.jpg" target="_blank" rel="noopener">
-            <img src="https://raw.githubusercontent.com/kevin102-debug/gp14/main/11.jpg" alt="GP14 on trailer, side profile" class="w-64 h-40 object-cover rounded shadow cursor-pointer" loading="lazy" />
+          <a href="https://raw.githubusercontent.com/kevin102-debug/gp14/main/11.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="https://raw.githubusercontent.com/kevin102-debug/gp14/main/11.jpg" alt="GP14 on trailer, side profile" class="w-64 h-40 object-cover rounded shadow cursor-pointer" loading="lazy" width="256" height="160" />
           </a>
-          <a href="https://raw.githubusercontent.com/kevin102-debug/gp14/main/1.jpg" target="_blank" rel="noopener">
-            <img src="https://raw.githubusercontent.com/kevin102-debug/gp14/main/1.jpg" alt="Deck detail and fittings" class="w-64 h-40 object-cover rounded shadow cursor-pointer" loading="lazy" />
+          <a href="https://raw.githubusercontent.com/kevin102-debug/gp14/main/1.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="https://raw.githubusercontent.com/kevin102-debug/gp14/main/1.jpg" alt="Deck detail and fittings" class="w-64 h-40 object-cover rounded shadow cursor-pointer" loading="lazy" width="256" height="160" />
           </a>
-          <a href="https://raw.githubusercontent.com/kevin102-debug/gp14/main/40.jpg" target="_blank" rel="noopener">
-            <img src="https://raw.githubusercontent.com/kevin102-debug/gp14/main/40.jpg" alt="Interior layout with through-deck sheeting" class="w-64 h-40 object-cover rounded shadow cursor-pointer" loading="lazy" />
+          <a href="https://raw.githubusercontent.com/kevin102-debug/gp14/main/40.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="https://raw.githubusercontent.com/kevin102-debug/gp14/main/40.jpg" alt="Interior layout with through-deck sheeting" class="w-64 h-40 object-cover rounded shadow cursor-pointer" loading="lazy" width="256" height="160" />
           </a>
-          <a href="https://raw.githubusercontent.com/kevin102-debug/gp14/main/45.jpg" target="_blank" rel="noopener">
-            <img src="https://raw.githubusercontent.com/kevin102-debug/gp14/main/45.jpg" alt="Sapele deck option in sunlight" class="w-64 h-40 object-cover rounded shadow cursor-pointer" loading="lazy" />
+          <a href="https://raw.githubusercontent.com/kevin102-debug/gp14/main/45.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="https://raw.githubusercontent.com/kevin102-debug/gp14/main/45.jpg" alt="Sapele deck option in sunlight" class="w-64 h-40 object-cover rounded shadow cursor-pointer" loading="lazy" width="256" height="160" />
           </a>
-          <a href="https://raw.githubusercontent.com/kevin102-debug/gp14/main/46.jpg" target="_blank" rel="noopener">
-            <img src="https://raw.githubusercontent.com/kevin102-debug/gp14/main/46.jpg" alt="Transom and rudder fittings" class="w-64 h-40 object-cover rounded shadow cursor-pointer" loading="lazy" />
+          <a href="https://raw.githubusercontent.com/kevin102-debug/gp14/main/46.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="https://raw.githubusercontent.com/kevin102-debug/gp14/main/46.jpg" alt="Transom and rudder fittings" class="w-64 h-40 object-cover rounded shadow cursor-pointer" loading="lazy" width="256" height="160" />
           </a>
-          <a href="https://raw.githubusercontent.com/kevin102-debug/gp14/main/48.jpg" target="_blank" rel="noopener">
-            <img src="https://raw.githubusercontent.com/kevin102-debug/gp14/main/48.jpg" alt="CNC-cut components prior to assembly" class="w-64 h-40 object-cover rounded shadow cursor-pointer" loading="lazy" />
+          <a href="https://raw.githubusercontent.com/kevin102-debug/gp14/main/48.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="https://raw.githubusercontent.com/kevin102-debug/gp14/main/48.jpg" alt="CNC-cut components prior to assembly" class="w-64 h-40 object-cover rounded shadow cursor-pointer" loading="lazy" width="256" height="160" />
           </a>
-          <a href="https://raw.githubusercontent.com/kevin102-debug/gp14/main/49.jpg" target="_blank" rel="noopener">
-            <img src="https://raw.githubusercontent.com/kevin102-debug/gp14/main/49.jpg" alt="Spray-finished hull in workshop" class="w-64 h-40 object-cover rounded shadow cursor-pointer" loading="lazy" />
+          <a href="https://raw.githubusercontent.com/kevin102-debug/gp14/main/49.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="https://raw.githubusercontent.com/kevin102-debug/gp14/main/49.jpg" alt="Spray-finished hull in workshop" class="w-64 h-40 object-cover rounded shadow cursor-pointer" loading="lazy" width="256" height="160" />
           </a>
-          <a href="https://raw.githubusercontent.com/kevin102-debug/gp14/main/515441718_24675280392073675_8812861726606272282_n.jpg" target="_blank" rel="noopener">
-            <img src="https://raw.githubusercontent.com/kevin102-debug/gp14/main/515441718_24675280392073675_8812861726606272282_n.jpg" alt="Launch day at the slipway" class="w-64 h-40 object-cover rounded shadow cursor-pointer" loading="lazy" />
+          <a href="https://raw.githubusercontent.com/kevin102-debug/gp14/main/515441718_24675280392073675_8812861726606272282_n.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="https://raw.githubusercontent.com/kevin102-debug/gp14/main/515441718_24675280392073675_8812861726606272282_n.jpg" alt="Launch day at the slipway" class="w-64 h-40 object-cover rounded shadow cursor-pointer" loading="lazy" width="256" height="160" />
           </a>
-          <a href="https://raw.githubusercontent.com/kevin102-debug/gp14/main/515898131_24653783710890010_3587639566012014502_n.jpg" target="_blank" rel="noopener">
-            <img src="https://raw.githubusercontent.com/kevin102-debug/gp14/main/515898131_24653783710890010_3587639566012014502_n.jpg" alt="Downwind leg with spinnaker" class="w-64 h-40 object-cover rounded shadow cursor-pointer" loading="lazy" />
+          <a href="https://raw.githubusercontent.com/kevin102-debug/gp14/main/515898131_24653783710890010_3587639566012014502_n.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="https://raw.githubusercontent.com/kevin102-debug/gp14/main/515898131_24653783710890010_3587639566012014502_n.jpg" alt="Downwind leg with spinnaker" class="w-64 h-40 object-cover rounded shadow cursor-pointer" loading="lazy" width="256" height="160" />
           </a>
-          <a href="https://raw.githubusercontent.com/kevin102-debug/gp14/main/IMG_0830%20(1).jpg" target="_blank" rel="noopener">
-            <img src="https://raw.githubusercontent.com/kevin102-debug/gp14/main/IMG_0830%20(1).jpg" alt="Rigging detail at the mast base" class="w-64 h-40 object-cover rounded shadow cursor-pointer" loading="lazy" />
+          <a href="https://raw.githubusercontent.com/kevin102-debug/gp14/main/IMG_0830%20(1).jpg" target="_blank" rel="noopener noreferrer">
+            <img src="https://raw.githubusercontent.com/kevin102-debug/gp14/main/IMG_0830%20(1).jpg" alt="Rigging detail at the mast base" class="w-64 h-40 object-cover rounded shadow cursor-pointer" loading="lazy" width="256" height="160" />
           </a>
-          <a href="https://raw.githubusercontent.com/kevin102-debug/gp14/main/33(1).jpg" target="_blank" rel="noopener">
-            <img src="https://raw.githubusercontent.com/kevin102-debug/gp14/main/33(1).jpg" alt="Workshop overview during fit-out" class="w-64 h-40 object-cover rounded shadow cursor-pointer" loading="lazy" />
+          <a href="https://raw.githubusercontent.com/kevin102-debug/gp14/main/33(1).jpg" target="_blank" rel="noopener noreferrer">
+            <img src="https://raw.githubusercontent.com/kevin102-debug/gp14/main/33(1).jpg" alt="Workshop overview during fit-out" class="w-64 h-40 object-cover rounded shadow cursor-pointer" loading="lazy" width="256" height="160" />
           </a>
-          <a href="https://raw.githubusercontent.com/kevin102-debug/gp14/main/515069546_24652010557733992_1134220088433094839_n.jpg" target="_blank" rel="noopener">
-            <img src="https://raw.githubusercontent.com/kevin102-debug/gp14/main/515069546_24652010557733992_1134220088433094839_n.jpg" alt="Shoreline test sail" class="w-64 h-40 object-cover rounded shadow cursor-pointer" loading="lazy" />
+          <a href="https://raw.githubusercontent.com/kevin102-debug/gp14/main/515069546_24652010557733992_1134220088433094839_n.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="https://raw.githubusercontent.com/kevin102-debug/gp14/main/515069546_24652010557733992_1134220088433094839_n.jpg" alt="Shoreline test sail" class="w-64 h-40 object-cover rounded shadow cursor-pointer" loading="lazy" width="256" height="160" />
           </a>
         </div>
       </div>
@@ -200,17 +227,17 @@
 
   <footer class="bg-gray-800 text-white py-10 px-4">
     <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between text-center md:text-left">
-      <p class="text-sm">&copy; 2025 Donnelly GP14 Racing and Cruising Builds. All rights reserved.</p>
+      <p class="text-sm">&copy; <span id="year"></span> Donnelly GP14 Racing and Cruising Builds. All rights reserved.</p>
       <div class="mt-4 md:mt-0 text-sm space-x-4">
         <a href="mailto:gp14build@gmail.com" class="hover:underline">gp14build@gmail.com</a>
         <span aria-hidden="true">|</span>
-        <a href="tel:+447742545699" class="hover:underline">07742 545699</a>
+        <a href="tel:+447742545699" aria-label="0 7 7 4 2 5 4 5 6 9 9" class="hover:underline">07742 545699</a>
       </div>
     </div>
   </footer>
 
   <!-- Modal -->
-  <div id="imageModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc">
+  <div id="imageModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50" role="dialog" aria-modal="true" aria-label="Image preview dialog">
     <div class="relative max-w-[90vw] max-h-[90vh] outline-none" tabindex="-1">
       <button id="closeBtn" class="absolute -top-12 right-0 text-white text-3xl focus-not-visible" aria-label="Close (Esc)">&times;</button>
       <img id="modalImage" class="max-w-full max-h-[90vh] rounded shadow" alt="Expanded gallery image" />
@@ -220,13 +247,29 @@
   </div>
 
   <script defer>
-    // Modal logic with focus management
+    // Footer year
+    (function(){
+      var y=document.getElementById('year'); if(y) y.textContent = new Date().getFullYear();
+    })();
+
+    // Modal logic with focus management + trap
     (function () {
       const modal = document.getElementById('imageModal');
       const modalImage = document.getElementById('modalImage');
       const closeBtn = document.getElementById('closeBtn');
       const gallery = document.getElementById('gallery');
+      const main = document.getElementById('main');
       let lastFocused = null;
+
+      const focusableSelectors = 'button,[href],img[tabindex],[tabindex]:not([tabindex="-1"])';
+      function trapFocus(e) {
+        if (e.key !== 'Tab' || modal.classList.contains('hidden')) return;
+        const nodes = modal.querySelectorAll(focusableSelectors);
+        if (!nodes.length) return;
+        const first = nodes[0], last = nodes[nodes.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
 
       function openModal(src, alt) {
         lastFocused = document.activeElement;
@@ -235,15 +278,20 @@
         document.body.style.overflow = 'hidden';
         modal.classList.remove('hidden');
         modal.classList.add('flex');
-        // Move focus to close button for accessibility
+        modal.setAttribute('aria-hidden', 'false');
+        if (main) { try { main.inert = true; } catch(e){} }
         closeBtn.focus({ preventScroll: true });
+        document.addEventListener('keydown', trapFocus);
       }
 
       function closeModal() {
         modal.classList.add('hidden');
         modal.classList.remove('flex');
         modalImage.src = '';
+        modal.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
+        if (main) { try { main.inert = false; } catch(e){} }
+        document.removeEventListener('keydown', trapFocus);
         if (lastFocused && typeof lastFocused.focus === 'function') {
           lastFocused.focus({ preventScroll: true });
         }
@@ -264,15 +312,9 @@
       // Close handlers
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') closeModal();
-        // Basic focus trap when modal is open
-        if (!modal.classList.contains('hidden') && e.key === 'Tab') {
-          e.preventDefault();
-          closeBtn.focus();
-        }
       });
 
       modal.addEventListener('click', (e) => {
-        // Click outside image closes
         if (e.target === modal) closeModal();
       });
 
